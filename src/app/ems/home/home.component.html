@@ -1,0 +1,21 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td class="thick">Employee Name</td>
+      <td class="thick">Designation</td>
+      <td  class="thick" width=275 align="center">Action</td>
+    </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let employee of employees">
+        <td>{{employee.name}}</td>
+        <td>{{employee.designation}}</td>
+        <td width=275>
+            <a class="btn btn-success" routerLink="/edit/{{employee.id}}">Edit</a>
+            <a class="btn btn-danger" (click)="deleteEmployee(employee.id)">Delete</a>
+        </td>
+     </tr>
+    
+  </tbody>
+ 
+</table>
